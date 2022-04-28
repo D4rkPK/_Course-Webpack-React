@@ -1,0 +1,25 @@
+{
+  "name": "course-webpack-react",
+  "version": "1.0.0",
+  "description": "React &amp; Webpack",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D4rkPK/_Course-Webpack-React.git"
+  },
+  "keywords": [],
+  "author": "bjpc <bjpc@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/D4rkPK/_Course-Webpack-React/issues"
+  },
+  "homepage": "https://github.com/D4rkPK/_Course-Webpack-React#readme"
+}
