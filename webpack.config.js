@@ -1,9 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require('css-minipizer-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const { cleanWebpackPlugin } = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -45,21 +45,21 @@ module.exports = {
           }
         ]
       },
-    plugins: [
+      plugins: [
         new HtmlWebpackPlugin({
-            template: './public/index.html',
-            filename: './index.html'
+          template: './public/index.html',
+          filename: './index.html'
         }),
         new MiniCssExtractPlugin({
-            filename: '[name].css'
+          filename: '[name].css'
         }),
-        new cleanWebpackPlugin(),
-    ],
-    optimization:{
+        new CleanWebpackPlugin(),
+      ],
+      optimization: {
         minimize: true,
         minimizer: [
-            new CssMinimizerPlugin(),
-            new TerserPlugin()
+          new CssMinimizerPlugin(),
+          new TerserPlugin(),
         ]
+      }
     }
-}
